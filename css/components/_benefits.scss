@@ -1,0 +1,69 @@
+//benefits
+.benefits {
+    position: relative;
+    margin: 0 0 90px 0;
+    @extend %clear;
+
+    &-slider {
+
+        &-item {
+            padding: 0 20px 10px 20px;
+            border-left: 1px solid $border;
+            color: $lightColor;
+
+            .icon {
+                margin: 0 0 13px 0;
+                height: 46px;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    fill: $theme;
+
+                    &.icon-benefit-1 {
+                        width: 96px;
+                        height: 96px;
+                    }
+
+                    &.icon-benefit-2 {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    &.icon-benefit-3 {
+                        width: 34px;
+                        height: 34px;
+                    }
+
+                    &.icon-benefit-4 {
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+            }
+
+            .name {
+                margin: 0 0 7px 0;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            p {
+                line-height: 1.38em;
+            }
+            
+            @media only screen and (max-width: 640px) {
+                border-right: 1px solid $border;
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        margin: 0 0 44px 0;
+    }
+}
+// end of benefits

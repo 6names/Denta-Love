@@ -1,0 +1,98 @@
+.info {
+    position: relative;
+    @extend %clear;
+
+    &-column {
+        @extend %frame;
+        @extend %halfList;
+
+        .section-title {
+            padding: 26px 40px 0 40px;
+            margin: 0 0 15px 0;
+            text-align: left;
+        }
+    }
+
+    &-slide {
+        padding: 0 40px 0 40px;
+        min-height: 145px;
+        color: $lightColor;
+
+        .title {
+            margin: 0 0 9px 0;
+            font-size: 18px;
+            font-weight: 500;
+
+            .date {
+                display: inline-block;
+            }
+        }
+
+        p {
+            line-height: 1.4em;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: underline;
+            color: $red;
+            font-weight: 600;
+            margin: 5px 0 0 0;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 40px 44px 40px;
+
+        .slick-dots {
+            top: 4px;
+            margin: 0;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        &-bottom,
+        &-slide,
+        &-column .section-title {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        margin: 0;
+
+        &-column .section-title {
+            padding-top: 16px;
+            margin-bottom: 10px;
+        }
+
+        &-slide {
+            .title {
+                margin: 0 0 5px 0;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.5em;
+            }
+        }
+
+        &-bottom {
+            padding-top: 26px;
+            padding-bottom: 22px;
+
+            .slick-dots {
+                top: 3px;
+            }
+        }
+    }
+}

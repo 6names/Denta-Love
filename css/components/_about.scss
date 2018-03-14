@@ -1,0 +1,127 @@
+.about {
+    position: relative;
+    @extend %clear;
+
+    &-slider {
+        margin: 0 0 58px 0;
+
+        &-image {
+            position: relative;
+            float: right;
+            z-index: 1;
+            width: calc(100% - 280px);
+
+            .image {
+                position: relative;
+                height: 590px;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    min-width: 100%;
+                    min-height: 100%;
+                    max-width: 99999%;
+                    width: auto;
+                    height: auto;
+                    transform: translate(-50%, -50%);
+                    background-size: cover;
+                }
+            }
+        }
+
+        &-text {
+            position: absolute;
+            left: 30px;
+            top: 18px;
+            z-index: 2;
+            width: 460px;
+            min-height: 553px;
+            padding: 22px 35px;
+            color: $white;
+            background: $theme;
+            background-image: linear-gradient(to top, rgba(0, 123, 210, 0.95) 0%, rgba(72, 221, 248, 0.95) 100%);
+
+            .section-title {
+                margin: 0 0 14px 0;
+                color: $white;
+                text-align: left;
+            }
+            
+            p {
+                margin: 0 0 23px 0;
+                line-height: 1.5em;
+            }
+            
+            [class*="-butn"] {
+                width: 100%;
+                
+                &:not(:last-child) {
+                    margin: 0 0 20px 0;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            &-text {
+                left: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .inner {
+                padding: 0;
+            }
+
+            &-item {
+                padding: 0;
+            }
+
+            &-image {
+                position: relative;
+                height: auto;
+                width: 100%;
+
+                .image {
+                    height: auto;
+
+                    img {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        min-height: 0;
+                        width: 100%;
+                        transform: translate(0, 0);
+                    }
+                }
+            }
+
+            &-text {
+                position: relative;
+                top: 0;
+                left: 0;
+                padding: 35px 20px 42px 20px;
+                width: 100%;
+                min-height: 0;
+            }
+        }
+
+        @media only screen and (max-width: 640px) {
+            margin: 0 0 32px 0;
+
+            &-text {
+
+                .section-title {
+                    margin: 0 0 12px 0;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin: 0 0 20px 0;
+                }
+            }
+        }
+    }
+}

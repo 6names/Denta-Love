@@ -1,0 +1,81 @@
+.footer {
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    min-height: 100px;
+    color: $lighterColor;
+    text-align: center;
+    background: $white;
+    overflow: hidden;
+    @extend %clear;
+    
+    &-holder {
+        border-top: 1px solid $border;
+        padding: 36px 0 40px 0;
+        @extend %clear;
+        
+    }
+
+    &-social {
+        margin: 0 0 12px 0;
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 11px;
+
+            svg {
+                width: 22px;
+                height: 22px;
+                fill: $theme;
+
+                &.icon-odnoklasniki,
+                &.icon-facebook {
+                    width: 24px;
+                    height: 24px;
+                }
+
+                &.icon-vk {
+                    width: 28px;
+                    height: 28px;
+                }
+
+                &.icon-instagram {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+
+            &:hover svg {
+                fill: $red;
+            }
+        }
+    }
+    
+    &-info {
+        margin: 0 0 11px 0;
+        font-size: 15px;
+
+        span {
+            display: block;
+            margin: 0 0 12px 0;
+        }
+    }
+
+    &-terms {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        &-holder {
+            padding: 20px 0 30px 0;
+        }
+
+        &-info, &-terms {
+            font-size: 12px;
+        }
+    }
+}

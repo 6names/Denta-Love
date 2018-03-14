@@ -1,0 +1,98 @@
+[class*="-butn"] {
+    position: relative;
+    display: block;
+    height: 48px;
+    padding: 0;
+    padding-bottom: 2px;
+    margin: 0;
+    font-family: $mainFont;
+    font-weight: 900;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.2s;
+    
+    &:hover {
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 640px) {
+        height: 28px;
+        font-size: 11px;
+        padding-bottom: 1px;
+    }
+}
+
+a[class*="-butn"] {
+    line-height: 46px;
+    &:hover {
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 640px) {
+        line-height: 26px;
+    }
+}
+
+.red-butn {
+    color: $white;
+    background: $red;
+    border: 1px solid $red;
+    box-shadow: 0 10px 35px rgba($red, 0.1);
+
+    &:hover {
+        color: $red;
+        background-color: $white;
+    }
+}
+
+.white-butn {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: none;
+    color: $lightColor;
+    background: $white;
+    border: 1px solid $lightColor;
+
+    &:hover {
+        border-color: $theme;
+        background-color: $theme;
+        color: $white;
+    }
+}
+
+.centered-button {
+    clear: both;
+    padding: 14px 0 0 0;
+
+    [class*="-butn"] {
+        width: 100%;
+        max-width: 458px;
+        margin: 0 auto;
+    }
+
+    .inner--with-list & {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+a.more-link {
+    display: inline-block;
+    color: $red;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 600;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    @media only screen and (max-width: 640px) {
+        font-size: 14px;
+    }
+}

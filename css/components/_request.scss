@@ -1,0 +1,94 @@
+.request {
+    padding: 30px 20px 40px 20px;
+    color: $mainColor;
+    background: $white;
+    border-radius: 4px;
+    
+    form {
+        max-width: 458px;
+        margin: 0 auto;
+    }
+
+    &-title {
+        margin: 0 0 29px 0;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    &-features {
+        margin: 0 0 14px 0;
+        font-size: 18px;
+        font-weight: 500;
+
+        span {
+            display: inline-block;
+            vertical-align: top;
+
+            &:not(:first-child) {
+                margin-left: 15px;
+            }
+        }
+
+        svg {
+            position: relative;
+            top: -1px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px 0 0;
+            width: 25px;
+            height: 25px;
+            fill: $theme;
+
+            &.icon-clock {
+                top: -3px;
+                width: 29px;
+                height: 29px;
+            }
+        }
+    }
+    
+    p {
+        padding: 0;
+        margin: 0 0 20px 0;
+        font-size: 14px;
+        line-height: normal;
+        color: $lightColor;
+    }
+
+    .red-butn {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 640px) {
+        padding: 22px 20px 25px 20px;
+
+        &-title {
+            margin: 0 0 11px 0;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        &-features {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+
+            svg {
+                top: -1px;
+                margin: 0 3px 0 0;
+                width: 14px;
+                height: 14px;
+
+                &.icon-clock {
+                    top: -3px;
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+        }
+
+        p {
+            margin: 0 0 11px 0;
+            font-size: 12px;
+        }
+    }
+}

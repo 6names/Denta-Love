@@ -1,0 +1,107 @@
+//____________TITLES______________________
+
+.section-title {
+    margin: 0 0 34px 0;
+    font-size: 48px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    color: $theme;
+
+    @media only screen and (max-width: 640px) {
+        font-size: 24px;
+        margin: 0 0 14px 0;
+    }
+}
+
+.small-title {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: $theme;
+
+    @media only screen and (max-width: 640px) {
+        font-size: 18px;
+        margin: 0 0 10px 0;
+    }
+}
+//____________end of TITLES_______________
+
+.inner {
+    position: relative;
+    max-width: 1220px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    @extend %clear;
+
+    &--with-list {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &--with-list {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    
+}
+
+.main {
+    position: relative;
+    z-index: 40;
+    display: block;
+    max-width: 1512px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 113px;
+    min-height: calc(100vh - 308px);
+    overflow: hidden;
+    @extend %clear;
+    
+    @media only screen and (max-width: 1024px) {
+        padding-top: 74px;
+    }
+}
+
+.hide {
+    opacity: 0;
+    
+    &.visible {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.map-box {
+    position: relative;
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+//site links
+.site-links {
+    padding: 100px 0;
+    
+    li {
+        font-size: 18px;
+        padding: 0 0 15px 0;
+    }
+}
+
+//end of site links

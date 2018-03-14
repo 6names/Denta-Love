@@ -1,0 +1,69 @@
+//fonts
+//noinspection CssUnknownTarget
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Light.woff2') format('woff2'),
+    url('../fonts/Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+//noinspection CssUnknownTarget
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+    url('../fonts/Lato-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+//noinspection CssUnknownTarget
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+    url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+//noinspection CssUnknownTarget
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Medium.woff2') format('woff2'),
+    url('../fonts/Lato-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+//noinspection CssUnknownTarget
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Black.woff2') format('woff2'),
+    url('../fonts/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+//variables
+$mainFont: 'Lato', Arial, Helvetica, sans-serif;
+
+$mainColor: #000000;
+$midColor: #727070;
+$lightColor: #797d80;
+$lighterColor: #b1b1b1;
+$placeHolder: #666666;
+
+$theme: #007bd2;
+
+$black: #000000;
+$white: #ffffff;
+$red: #ea1542;
+$lightBlue: #e9f8ff;
+
+$shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+$shadowActive: 0 10px 35px rgba(0, 123, 210, 0.25);
+$shadowHeader: 0 0 10px rgba(0, 0, 0, 0.2);
+
+$gray: #626263;
+
+$border: #d3d3d5;
+$inputBorder: #e5e5e5;
