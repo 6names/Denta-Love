@@ -8,6 +8,7 @@
 //@prepros-prepend components/messages_ru.min.js
 //@prepros-prepend components/jquery.selectBoxIt.js
 //@prepros-prepend components/jquery.fancybox.js
+//@prepros-prepend components/hc-sticky.js
 
 $(function () {
     var modalHolder = $("#modal-holder"),
@@ -40,6 +41,7 @@ $(function () {
 
         scrollBarW = (w1 - w2);
     }
+
     getScrollBarWidth();
 
     function stopEvents(e) {
@@ -186,8 +188,44 @@ $(function () {
 
             }
         });
+
+        $("#testimonials-form").validate({
+            errorPlacement: function (error, element) {
+            }, /*disable error label*/
+            ignore: '', /*do not ignore hidden elements*/
+            rules: {
+                name: {
+                    required: true
+                },
+                message: {
+                    required: true
+                }
+            },
+            highlight: function (element) {
+                $(element).parent().addClass("error");
+                $(element).addClass("error");
+            },
+            unhighlight: function (element) {
+                $(element).parent().removeClass("error");
+                $(element).removeClass("error");
+            },
+            submitHandler: function (form) {
+                console.log("Lorem");
+                modalHolder.load('modals/testimonials-modal.html', function () {
+                    pageBody.addClass("modal-open").css("padding-right", scrollBarW);
+
+                    var mod = $('.modal');
+                    initFunc(mod);
+                    $(this).addClass("active");
+                });
+            },
+            invalidHandler: function (event, validator) {
+
+            }
+        });
         // end of forms
     }
+
     initFunc($(document));
 
     // modal
@@ -224,6 +262,8 @@ $(function () {
             }
         });
     }
+
+    accordion($(".accordion-title"), $(".accordion-content"));
 
     function singleAccordion(trigger, content) {
         trigger.click(function () {
@@ -325,6 +365,43 @@ $(function () {
         }]
     });
 
+    $(".three-slider").slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 600,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        centerMode: false,
+        variableWidth: false,
+        fade: false,
+        autoplay: false,
+        autoplaySpeed: 7000,
+        draggable: true,
+        swipe: true,
+        swipeToSlide: true,
+        initialSlide: 0,
+        pauseOnHover: true,
+        vertical: false,
+        focusOnSelect: false,
+        accessibility: false,
+        touchThreshold: 30,
+
+        responsive: [{
+            breakpoint: 1025,
+            settings: {
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
+
+
     $(".info-slider").each(function () {
         $(this).slick({
             dots: true,
@@ -380,6 +457,44 @@ $(function () {
     });
     // end of fancy
 
+    // anchors
+    var anchorBtn = $("a.anchor");
+    anchorBtn.click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top - 70;
+        $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 600);
+
+        return false;
+    });
+
+    $(window).on("load scroll", function () {
+        $(".scroll-block").each(function () {
+            var thisId = "#" + $(this).attr("id");
+            if ($(window).scrollTop() >= ($(this).offset().top - 70)) {
+                anchorBtn.removeClass("current");
+                $("a").each(function (index, element) {
+                    if ($(element).attr("href") === thisId) {
+                        $(element).addClass("current");
+                    }
+                })
+            }
+        });
+    });
+    // end of anchors
+
+    // sticky column
+    $('#aside').hcSticky({
+        stickTo: '#aside-holder',
+        innerTop: -70,
+        queries: {
+            1024: {
+                disable: true,
+                stickTo: 'body'
+            }
+        }
+    });
+    // end of sticky column
+
     // navigation___________________
     var mobileNavClose = $(".mobile-nav-close"),
         mobileButton = $(".mobile-nav-btn"),
@@ -414,7 +529,7 @@ $(function () {
 
     $(window).on("load scroll", function () {
         $(".header").each(function () {
-            if ($(window).scrollTop() >= 200) {
+            if ($(window).scrollTop() >= 220) {
                 $(this).addClass("fixed");
             } else {
                 $(this).removeClass("fixed");

@@ -8,12 +8,12 @@
     background: $white;
     overflow: hidden;
     @extend %clear;
-    
+
     &-holder {
         border-top: 1px solid $border;
         padding: 36px 0 40px 0;
         @extend %clear;
-        
+
     }
 
     &-social {
@@ -50,7 +50,7 @@
             }
         }
     }
-    
+
     &-info {
         margin: 0 0 11px 0;
         font-size: 15px;

@@ -122,7 +122,7 @@
             }
 
             &.with-subnav {
-                a {
+                a:not([class*="-butn"]) {
                     transition: all 0s;
                 }
 
@@ -292,7 +292,7 @@
             span {
                 display: block;
             }
-            
+
             .red-butn {
                 margin: 24px 0 14px 0;
             }
@@ -348,7 +348,6 @@
                         padding-top: 17px;
                     }
 
-
                     &.with-method {
                         & > a {
                             &:before {
@@ -399,7 +398,6 @@
     }
 }
 
-
 .mobile-nav {
     position: absolute;
     top: 74px;
@@ -414,12 +412,12 @@
     transform: translate3d(-360px, 0, 0);
     transition: transform 0.35s;
     @extend %clear;
-    
+
     &.active {
         width: 320px;
         box-shadow: 0 5px 17px rgba(0, 0, 0, 0.2);
         transform: translate3d(0, 0, 0);
-        
+
         .mobile-nav-holder {
             opacity: 1;
             transform: translate3d(0, 0, 0);
@@ -434,7 +432,7 @@
     &-content {
         @extend %section-scroll-content;
     }
-    
+
     &-btn {
         position: absolute;
         top: 0;
@@ -448,7 +446,7 @@
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
-        
+
         div {
             position: absolute;
             top: 50%;
@@ -460,7 +458,7 @@
             margin-left: -15px;
             background: $theme;
             transition: all 0.3s;
-            
+
             &:after,
             &:before {
                 position: absolute;
@@ -472,33 +470,33 @@
                 background: $theme;
                 transition: all 0.3s;
             }
-            
+
             &:before {
                 top: -10px;
             }
-            
+
             &:after {
                 top: 10px;
                 opacity: 1;
             }
         }
-        
+
         &.active div {
             background: $theme;
             transform: rotate(45deg);
-            
+
             &:before {
                 background: $theme;
                 transform: rotate(-90deg) translate(-10px, 0);
             }
-            
+
             &:after {
                 transform: rotate(90deg) translate(-10px, 0);
                 opacity: 0;
             }
         }
     }
-    
+
     &-holder {
         position: relative;
         z-index: 2;
@@ -543,6 +541,11 @@
                 height: 48px;
                 width: 100%;
                 margin: 18px 0 0 0;
+                line-height: 36px;
+
+                &:hover {
+                    color: $white;
+                }
             }
 
             & > ul {
@@ -582,7 +585,7 @@
             }
         }
     }
-    
+
     &-close {
         position: fixed;
         top: 74px;
@@ -593,22 +596,22 @@
         width: 100%;
         background: transparent;
         transition: background 0.35s 0.35s;
-        
+
         &.active {
             height: calc(100vh - 74px);
             background: rgba($black, 0.2);
         }
     }
-    
-    
+
     @media only screen and (max-width: 1024px) {
         display: block;
-        
+
         &-btn,
         &-close {
             display: block;
         }
-        
+
     }
 }
+
 //end of mobile nav

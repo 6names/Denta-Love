@@ -48,15 +48,15 @@
                 color: $white;
                 text-align: left;
             }
-            
+
             p {
                 margin: 0 0 23px 0;
                 line-height: 1.5em;
             }
-            
+
             [class*="-butn"] {
                 width: 100%;
-                
+
                 &:not(:last-child) {
                     margin: 0 0 20px 0;
                 }

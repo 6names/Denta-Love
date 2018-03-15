@@ -22,7 +22,7 @@ input::-ms-clear {
     color: transparent;
 }
 
-:focus::-webkit-input-placeholder{
+:focus::-webkit-input-placeholder {
     color: transparent;
 }
 
@@ -42,12 +42,12 @@ input.text-input {
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    
+
     &.error {
         color: $red;
         border: 1px solid $red;
     }
-    
+
     //noinspection ALL
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -94,7 +94,7 @@ label.error {
     overflow: hidden;
     cursor: pointer;
     border-radius: 50%;
-    
+
     &:before {
         position: absolute;
         content: '';
@@ -108,7 +108,7 @@ label.error {
         opacity: 0;
         transition: all 0.2s;
     }
-    
+
     & input {
         position: absolute;
         top: 0;
@@ -120,7 +120,7 @@ label.error {
         border: none;
         visibility: hidden;
     }
-    
+
     &.checked:before {
         opacity: 1;
     }
@@ -136,7 +136,7 @@ label.error {
     margin: 0 0 0 0;
     overflow: hidden;
     cursor: pointer;
-    
+
     &:before {
         position: absolute;
         content: '';
@@ -150,7 +150,7 @@ label.error {
         opacity: 0;
         transition: all 0.2s;
     }
-    
+
     & input {
         position: absolute;
         top: 0;
@@ -162,7 +162,7 @@ label.error {
         border: none;
         visibility: hidden;
     }
-    
+
     &.checked:before {
         opacity: 1;
     }

@@ -55,7 +55,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    
+
     img {
         position: absolute;
         top: 50%;
@@ -76,11 +76,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     img {
         height: auto;
     }
-    
+
     &.image--tall {
         img {
             height: 100%;
@@ -173,6 +173,55 @@
         float: none;
         width: 100%;
         padding: 0 10px;
+        margin-bottom: 10px;
+
+        &:nth-child(odd) {
+            float: none;
+        }
+    }
+}
+
+%fourList {
+    float: left;
+    width: 25%;
+    padding: 0 20px;
+    margin-bottom: 40px;
+
+    &:nth-child(4n + 1) {
+        clear: both;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        width: 33.333%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+
+        &:nth-child(3n + 1) {
+            clear: both;
+        }
+
+        &:nth-child(4n + 1) {
+            clear: none;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        float: right;
+        width: 50%;
+
+        &:nth-child(3n + 1) {
+            clear: none;
+        }
+
+        &:nth-child(odd) {
+            float: left;
+            clear: both;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        float: none;
+        width: 100%;
         margin-bottom: 10px;
 
         &:nth-child(odd) {

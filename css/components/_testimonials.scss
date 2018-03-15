@@ -1,0 +1,218 @@
+.testimonials {
+    position: relative;
+    margin: 0 0 80px 0;
+    @extend %clear;
+
+    &-form {
+        @extend %clear;
+
+        &-column {
+            position: relative;
+            min-height: 300px;
+            @extend %halfList;
+        }
+
+        &-info {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: $lightBlue;
+            padding: 30px 40px 40px 40px;
+            min-height: 300px;
+            box-shadow: $shadow;
+
+            img {
+                position: absolute;
+                bottom: 0;
+                z-index: 1;
+                right: 10px;
+                display: block;
+                height: auto;
+                width: 192px;
+            }
+
+            .small-title {
+                position: relative;
+                z-index: 2;
+                font-size: 36px;
+                max-width: 280px;
+            }
+
+            p {
+                position: relative;
+                z-index: 2;
+                max-width: 320px;
+                font-size: 18px;
+                line-height: 24px;
+                color: $lightColor;
+            }
+        }
+
+        &-title {
+            margin: 0 0 17px 0;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        &-holder {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 40px 40px 40px 40px;
+            box-shadow: $shadow;
+            background: $white;
+
+            p {
+                margin: 0 0 20px 0;
+                font-size: 18px;
+                line-height: 24px;
+                color: $lightColor;
+            }
+
+            [class*="-butn"] {
+                width: 100%;
+            }
+        }
+    }
+
+    &-list {
+        @extend %clear;
+    }
+
+    &-item {
+        min-height: 320px;
+        padding: 36px 40px 40px 40px;
+        color: $lightColor;
+        line-height: 22px;
+        @extend %frame;
+        @extend %halfList;
+
+        &-name {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 600;
+
+            time {
+                display: inline-block;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1180px) {
+        &-form-info {
+            img {
+                width: 150px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        &-form {
+            &-info {
+                padding: 10px 20px 20px 20px;
+
+                img {
+                    width: 120px;
+                }
+
+                .small-title {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            &-holder {
+                padding: 20px 20px 20px 20px;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &-item {
+            min-height: 280px;
+            padding: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        &-form {
+            &-column {
+                min-height: 0;
+            }
+
+            &-info {
+                min-height: 160px;
+
+                img {
+                    width: 103px;
+                }
+
+                .small-title {
+                    font-size: 24px;
+                }
+            }
+
+            &-holder {
+                position: relative;
+            }
+        }
+
+        &-item {
+            min-height: 0;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        &-form {
+            &-info {
+                .small-title {
+                    font-size: 18px;
+                    max-width: 140px;
+                }
+
+                p {
+                    max-width: 160px;
+                    font-size: 14px;
+                    line-height: normal;
+                }
+            }
+
+            &-holder {
+
+                p {
+                    margin: 0 0 10px 0;
+                    font-size: 14px;
+                    line-height: normal;
+                }
+            }
+
+            &-title {
+                margin: 0 0 10px 0;
+                font-size: 18px;
+            }
+        }
+
+        &-item {
+            font-size: 14px;
+
+            &-name {
+                margin: 0 0 5px 0;
+                font-size: 16px;
+
+                time {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,10 @@
     color: $white;
     overflow: hidden;
 
+    &--specialists {
+        padding-bottom: 153px;
+    }
+
     .inner {
         z-index: 2;
         opacity: 0;
@@ -136,6 +140,11 @@
         padding: 24px 0 0 0;
         margin: 0 0 34px 0;
 
+        &--no-text,
+        &--specialists {
+            padding-bottom: 25px;
+        }
+
         .inner {
             padding: 0;
         }
@@ -178,4 +187,5 @@
         }
     }
 }
+
 // end of hero

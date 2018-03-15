@@ -8,27 +8,20 @@
 @import "components/buttons";
 @import "components/hero";
 @import "components/request";
-@import "components/catalogue";
 @import "components/about";
 @import "components/benefits";
 @import "components/info";
 @import "components/contacts";
-
-
-
-
-
-
+@import "components/service";
+@import "components/faq";
+@import "components/catalogue";
+@import "components/price-list";
+@import "components/specialists";
+@import "components/testimonials";
+@import "components/news";
+@import "components/article";
 @import "components/modal";
 @import "components/plugins";
-
-@media only screen and (max-width: 1512px) {
-    blockquote {
-        page-break-inside: avoid;
-    }
-}
-
-//___________end of RESPONSIVE___________________
 
 //___________Print styles.___________________
 @media print {

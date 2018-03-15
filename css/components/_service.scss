@@ -1,0 +1,302 @@
+.service {
+    position: relative;
+    margin: 0 0 60px 0;
+    @extend %clear;
+
+    .section-title {
+        text-align: left;
+    }
+
+    .faq {
+        margin-top: 60px;
+    }
+
+    &-preview {
+        @extend %clear;
+
+        &-row {
+            @extend %clear;
+        }
+
+        &-item {
+            color: $lightColor;
+            @extend %fourList;
+            @extend %clear;
+
+            .image {
+                position: relative;
+
+                img {
+                    position: relative;
+                    z-index: 1;
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+
+                &-text {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px 30px 40px 40px;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: $white;
+
+                    mark {
+                        display: block;
+                        font-size: 18px;
+                        line-height: 24px;
+                        font-weight: 500;
+                    }
+
+                    span {
+                        display: block;
+                        margin: 0 0 15px 0;
+                        font-size: 30px;
+                        font-weight: 300;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 18px;
+                        margin: 8px 0 0 0;
+                    }
+                }
+            }
+
+            .name {
+                margin: 16px 0 0 0;
+                font-size: 18px;
+                line-height: 24px;
+
+                p {
+                    font-size: 14px;
+                    line-height: 18px;
+                    margin: 8px 0 0 0;
+                }
+            }
+
+        }
+
+        @media only screen and (max-width: 1180px) {
+            &-item {
+                .image {
+                    &-text {
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+
+        @media only screen and (max-width: 640px) {
+            &-item {
+                margin-bottom: 20px;
+
+                .image {
+                    float: left;
+                    width: calc(50% - 10px);
+                    &-text {
+                        padding: 10px;
+
+                        mark {
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+
+                        span {
+                            margin: 0 0 5px 0;
+                            font-size: 18px;
+                        }
+
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+
+                .name {
+                    float: right;
+                    width: calc(50% - 10px);
+                    margin: 0;
+                    font-size: 14px;
+                    line-height: 18px;
+                    word-break: break-all;
+
+                    p {
+                        font-size: 12px;
+                        line-height: normal;
+                        margin: 5px 0 0 0;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    &-info {
+        margin: 0 0 60px 0;
+
+        .small-title {
+            font-weight: 400;
+            text-transform: none;
+        }
+
+        &-holder {
+            display: flex;
+            align-items: stretch;
+            @extend %frame;
+        }
+
+        &-column {
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 480px;
+            width: calc(50% + 20px);
+            padding: 20px 40px 20px 40px;
+            font-size: 18px;
+            line-height: 30px;
+            color: $lightColor;
+
+            &:first-child {
+                width: calc(50% - 20px);
+            }
+
+            .image {
+                @extend %fullImage;
+            }
+        }
+
+        &--reverse {
+            .service-info-column {
+                order: 1;
+                width: calc(50% - 20px);
+
+                &:first-child {
+                    order: 2;
+                    width: calc(50% + 20px);
+                }
+            }
+        }
+
+        .centered-button {
+            margin-top: 40px;
+        }
+    }
+
+    &-text {
+        margin: 0 0 60px 0;
+
+        p {
+            font-size: 18px;
+            line-height: 30px;
+            color: $lightColor;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        &-info {
+            margin: 0 0 40px 0;
+
+            &-column {
+                width: calc(50% + 10px);
+                min-height: 0;
+                padding: 20px;
+
+                &:first-child {
+                    width: calc(50% - 10px);
+                }
+            }
+
+            &--reverse {
+                .service-info-column {
+                    width: calc(50% - 10px);
+
+                    &:first-child {
+                        width: calc(50% + 10px);
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .faq {
+            margin-top: 30px;
+        }
+
+        &-info {
+            margin: 0 0 20px 0;
+
+            &-holder {
+                display: block;
+            }
+
+            &-column {
+                width: 100%;
+                line-height: normal;
+
+                &:first-child {
+                    width: 100%;
+                    padding: 0;
+                }
+
+                .image {
+                    position: relative;
+                    height: auto;
+
+                    img {
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: auto;
+                        transform: translate3d(0, 0, 0);
+                        min-height: 0;
+                    }
+                }
+            }
+
+            &--reverse {
+                .service-info-column {
+                    width: 100%;
+
+                    &:first-child {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .centered-button {
+                margin-top: 20px;
+            }
+        }
+
+        &-text {
+            margin: 0 0 20px 0;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        &-info {
+            &-column {
+                font-size: 14px;
+            }
+        }
+
+        &-text {
+            p {
+                font-size: 14px;
+                line-height: normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.faq {
+    position: relative;
+    margin: 0 0 60px 0;
+    @extend %clear;
+
+    .section-title {
+        text-align: left;
+    }
+}
+
+.accordion {
+    &-section {
+        margin: 0 0 10px 0;
+        @extend %frame;
+    }
+
+    &-title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 82px;
+        padding: 10px 70px 10px 40px;
+        font-size: 24px;
+        color: $lightColor;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 37px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin-top: -12px;
+            //noinspection CssUnknownTarget
+            background: url('../images/ui/cross.svg') no-repeat 0 0;
+            background-size: 24px 24px;
+            transform: rotate(-45deg);
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            color: $theme;
+        }
+
+        &.active {
+            color: $theme;
+
+            &:before {
+                transform: rotate(0);
+            }
+        }
+    }
+
+    &-content {
+        padding: 0 40px 30px 40px;
+        font-size: 18px;
+        line-height: 30px;
+        color: $lightColor;
+    }
+
+    &-figure {
+        margin: 15px 0 0 0;
+
+        img {
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        &-title {
+            padding: 10px 70px 10px 20px;
+        }
+
+        &-content {
+            padding: 0 20px 20px 20px;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        margin: 0 0 40px 0;
+
+        &-title {
+            min-height: 54px;
+            padding: 20px 25px 20px 10px;
+            font-size: 14px;
+            font-weight: 600;
+
+            &:before {
+                right: 10px;
+                width: 14px;
+                height: 14px;
+                background-size: 14px 14px;
+                margin-top: -7px;
+            }
+        }
+
+        &-content {
+            padding: 0 10px 20px 10px;
+            font-size: 14px;
+            line-height: normal;
+        }
+    }
+}

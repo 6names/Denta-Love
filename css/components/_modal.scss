@@ -8,13 +8,13 @@
     max-height: 100%;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    
+
     &-holder {
         background: fade_out($black, 0.5);
         opacity: 0;
         transition: opacity 0.35s;
         @extend %clear;
-    
+
         &.active {
             position: fixed;
             top: 0;
@@ -26,7 +26,7 @@
             opacity: 1;
         }
     }
-    
+
     &-trigger {
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
@@ -34,21 +34,21 @@
         -moz-user-select: none;
         -ms-user-select: none;
     }
-    
+
     &-row {
         position: relative;
         display: table;
         width: 100%;
         height: 100%;
     }
-    
+
     &-cell {
         display: table-cell;
         vertical-align: middle;
         height: 100%;
         padding: 0 20px;
     }
-    
+
     &-close-wide {
         position: absolute;
         top: 0;
@@ -61,7 +61,7 @@
         min-width: 100%;
         min-height: 100%;
     }
-    
+
     &-close-small {
         position: absolute;
         top: 0;
@@ -70,7 +70,7 @@
         width: 40px;
         height: 40px;
         cursor: pointer;
-        
+
         svg {
             position: absolute;
             bottom: 0;
@@ -129,6 +129,7 @@
     }
 
     @media only screen and (min-width: 641px) {
+        min-height: 268px;
         padding: 30px 20px 50px 20px;
         //noinspection CssUnknownTarget
         background: $lightBlue url('../images/confirm-bg.png') no-repeat 90% bottom;

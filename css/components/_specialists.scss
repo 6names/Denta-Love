@@ -1,0 +1,123 @@
+.specialists {
+    position: relative;
+    margin: 0 0 80px 0;
+    @extend %clear;
+
+    &-ceo {
+        @extend %frame;
+        @extend .catalogue-info;
+
+        &-image {
+            @extend .catalogue-info-image;
+        }
+
+        &-text {
+            @extend .catalogue-info-text;
+        }
+    }
+
+    &-post {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: $lightColor;
+    }
+
+    &-list {
+        @extend %clear;
+    }
+
+    &-item {
+        min-height: 346px;
+        padding: 40px 40px 40px 40px;
+        @extend %frame;
+        @extend %halfList;
+        @extend %clear;
+
+        &-photo {
+            position: relative;
+            float: left;
+            width: 162px;
+
+            .photo {
+                position: relative;
+                z-index: 1;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            svg {
+                position: absolute;
+                top: -2px;
+                left: -3px;
+                z-index: 2;
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        &-content {
+            float: right;
+            width: calc(100% - 200px);
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 18px;
+            color: $lightColor;
+
+            &:not(:last-child) {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1024px) {
+        &-item {
+            padding: 30px 20px;
+
+            &-photo {
+                width: 100px;
+            }
+
+            &-content {
+                width: calc(100% - 120px);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        &-item {
+            min-height: 0;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        margin: 0 0 60px 0;
+
+        &-item {
+            padding: 30px 20px;
+
+            &-photo {
+                float: none;
+                width: 160px;
+                margin: 0 auto;
+            }
+
+            &-content {
+                float: none;
+                width: 100%;
+                padding: 20px 0 0 0;
+            }
+        }
+
+        &-post {
+            font-size: 16px;
+        }
+    }
+}
